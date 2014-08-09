@@ -1,5 +1,7 @@
 using BinaryAnalysis
 using Base.Test
 
-# write your own tests here
-@test 1 == 1
+
+root = joinpath(JULIA_HOME,"julia")
+dylibs = get_dltree(root)
+@show dylibs
